@@ -9,6 +9,7 @@ docker image build -t example-task .
 docker tag example-task:v1.0.0 thiyya/example-task:latest
 docker push thiyya/example-task:latest
 ```
+* https://hub.docker.com/repository/docker/thiyya/example-task
 * A system such as k8s or docker swarm is used for 
 automating deployment, scaling and management of containerized applications of this image. I used k8s.
 * Minikube provides us a single node k8s cluster in our locale.
