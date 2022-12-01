@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: firstdeployment
+    labels:
+      team: development
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: example-task
+        image: thiyya/example-task:latest
+        ports:
+        - containerPort: 8080
